@@ -1,0 +1,12 @@
+<h1 class="title">Customers Missing Email</h1>
+
+<div class="columns is-multiline">
+  <% @customers.each do |customer| %>
+    <%= render 'customer', customer: customer %>
+  <% end %>
+</div>
+
+<div class="buttons">
+  <%= link_to 'Back to Customer List', customers_path, class: 'button is-info' %>
+  <%= link_to 'Alphabetized Customers', alphabetized_customers_path, class: 'button is-info' %>
+</div>

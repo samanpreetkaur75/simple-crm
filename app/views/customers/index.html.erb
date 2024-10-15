@@ -1,0 +1,12 @@
+<h1 class="title">All Customers</h1>
+
+<div class="customer-list">
+  <% @customers.each do |customer| %>
+    <%= render 'customer', customer: customer %>
+  <% end %>
+</div>
+
+<div class="buttons">
+  <%= link_to 'Customers Missing Email', customers_missing_email_path, class: 'button is-info' %>
+  <%= link_to 'Alphabetized Customers', alphabetized_customers_path, class: 'button is-info' %>
+</div>
